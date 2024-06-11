@@ -1,7 +1,7 @@
 # 3D_Swin_transformer_classification
 ## Introduction
 The model is modified by [Swin_UNTER](https://github.com/Project-MONAI/research-contributions/tree/main/SwinUNETR/BTCV). The model has been augmented with a classification head, which can classify the type you want.
-Noticed that the model is for 3D medical image.
+Noticed that the model is for 3D medical image. Please modify your dataloader (`data_utils.py`) to customize the dataset.
 
 ## Installation and dependencies
 1. Clone the repository
@@ -50,6 +50,12 @@ This loss function combines a sigmoid activation with binary cross-entropy loss,
 A prediction value greater than 0.5 is classified as positive (commonly labeled as 1), and less than 0.5 as negative (commonly labeled as 0).
 
 ## Usage
+For Training:
 ```
 python main.py --batch_size=<batch_size> --logdir=<model_name> --optim_lr=1e-4 --lrschedule=warmup_cosine --roi_x=64 --roi_y=64 --roi_z=64 --val_every 1 --save_checkpoint
+```
+For evaluation:
+Please modify the dataloader to customize the dataset.
+```
+python evaluation.py
 ```
