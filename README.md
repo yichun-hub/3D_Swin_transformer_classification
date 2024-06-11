@@ -54,7 +54,7 @@ For Training:
 ```
 python main.py --batch_size=<batch_size> --logdir=<model_name> --optim_lr=1e-4 --lrschedule=warmup_cosine --roi_x=64 --roi_y=64 --roi_z=64 --val_every 1 --save_checkpoint
 ```
-For evaluation:
+For evaluation:  
 Please modify the dataloader to customize the dataset.
 ```
 python evaluation.py
