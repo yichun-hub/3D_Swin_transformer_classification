@@ -6,6 +6,10 @@ Noticed that the model is for 3D medical image. Please modify your dataloader (`
 ## Installation and dependencies
 1. Clone the repository
 2. Install required packages
+please download Pytorch on the official website and download dependencies by following command:
+```
+pip install -r requirements.txt
+```
 
 ## Training
 Depending on the classification task — binary or two-class(multiple classes) — different loss functions and evaluation metrics are used:
